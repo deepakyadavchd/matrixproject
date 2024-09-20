@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+<form method="POST">
+    {% csrf_token %}
+
+    <div  style="color: red;">{{error}}</div> <br>
+
+       
+   
+Name :<input type="text" name="name123" placeholder="Enter your Name" ><br><br>  
+
+
+   <div  style="color: red;">{{error1}}</div> <br>
+   
+
+   
+Email :<input type="text" name="email123" placeholder="Enter your Email" ><br><br>
+
+
+  
+<div  style="color: red;">{{error2}}</div> <br>
+
+
+Phone No :<input type="tel" name="phone123" placeholder="Enter your phone no." ><br><br>
+
+
+
+
+gender:<input type="radio" name="gen" value=" male" >Male
+    <input type="radio"  name="gen" value="female" >Female   <br><br>
+
+
+
+ Hobbies: <input type="checkbox" value="Study" name="text_h1"> Study      
+      <input type="checkbox"  value="Playing" name="text_h2" > Playing <br><br>
+
+ 
+
+
+City: <select name="cities">
+    <option value="Mumbai" >Mumbai</option>
+    <option  value="Delhi" >Delhi</option>
+    <option  value="Chandigarh" >Chandigarh</option>
+    <option  value="Noida"> Noida</option>
+  </select><br><br>
+
+
+
+ <button name="btn" value="btn_value"> Submit </button>
+  
+
+</form>
+
+
+<div>{{name}}</div>
+<div>{{email}}</div>
+<div>{{phone }}</div>
+<div>{{hobby}}</div>
+</body>
+</html>
